@@ -1,4 +1,6 @@
-﻿namespace DSAndAlgorithmsProblem
+﻿using DSandAlgorithm;
+
+namespace DSAndAlgorithmsProblem
 {
     internal class Program
     {
@@ -8,6 +10,7 @@
             BubbleSort bubbleSort = new BubbleSort();
             InsertionSort insertionSort = new InsertionSort();
             MergeSort mergeSort = new MergeSort();
+            Anagram anagram = new Anagram();
             while (true)
             {
                 Console.WriteLine("Enter the option : \n1. binarySearch \n2. bubbleSort \n3. InsertionSort \n4. MergeSort");
@@ -39,6 +42,12 @@
                             Console.Write(array[i] + " ");
                         }
                         Console.WriteLine();
+                        break;
+                    case 5:
+                        if (anagram.AnagramDetection())
+                            Console.WriteLine("Given words are Anagrams!");
+                        else
+                            Console.WriteLine("No! Given words are not Anagrams!");
                         break;
                     default:
                         Console.WriteLine("please choose correct options :");
